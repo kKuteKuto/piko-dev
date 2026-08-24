@@ -29,9 +29,13 @@ internal object TweetUsernameFingerprint : Fingerprint(
     name = "getTweetUsername",
 )
 
-internal object TweetProfileNameFingerprint : Fingerprint(
+internal object TweetExtMediaEntitiesListFingerprint : Fingerprint(
     definingClass = ENTITY_TWEET_DEFINING_CLASS,
-    name = "getTweetProfileName",
+    returnType = "Ljava/util/List;",
+    accessFlags = listOf(AccessFlags.PUBLIC, AccessFlags.FINAL),
+    custom = { method, _ ->
+        method.returnType == "Ljava/util/List;" || method.returnType.endsWith("MediaEntity;")
+    }
 )
 
 internal object TweetUserIdFingerprint : Fingerprint(
@@ -102,6 +106,7 @@ internal object TweetNamesFingerprint : Fingerprint(
 )
 
 internal object TweetMediaEntityClassFingerprint : Fingerprint(
+    definingClass = "Lcom/twitter/model/core/entity/s;",
     strings = listOf("EntityList{mEntities="),
 )
 

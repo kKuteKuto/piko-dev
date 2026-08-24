@@ -10,14 +10,13 @@ import app.crimera.patches.twitter.utils.Constants.ENTITY_DESCRIPTOR
 import app.morphe.patcher.Fingerprint
 
 private const val ENTITY_CLASS = "${ENTITY_DESCRIPTOR}TwitterUser;"
+
+// Giữ lại 3-4 trường nguyên bản nhất của TwitterUser toString, loại bỏ các trường mới bị đổi vị trí
 val STRING_LIST =
     listOf(
-        ", fastfollowersCount=",
-        ", statusesCount=",
-        ", mediaCount=",
-        ", favoritesCount=",
-        ", articlesCount=",
-        ", lastUpdated=",
+        "fastfollowersCount=",
+        "statusesCount=",
+        "mediaCount=",
     )
 
 internal object GetStatusCountExtension : Fingerprint(

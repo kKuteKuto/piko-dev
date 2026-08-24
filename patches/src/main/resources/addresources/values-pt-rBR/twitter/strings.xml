@@ -3,7 +3,7 @@
     <!-- Settings Search -->
     <string name="piko_settings_search_hint">Pesquisar configurações do Piko</string>
     <string name="piko_settings_search_clear">Limpar entrada</string>
-    <string name="piko_settings_search_no_results">Nenhum resultado encontrado para \"%1$s\"</string>
+    <string name="piko_settings_search_no_results">Nenhum resultado para \"%s\"</string>
     <!-- Premium Settings -->
     <string name="piko_title_premium">Premium</string>
     <string name="piko_pref_undo_posts">Ativar desfazer postagens</string>
@@ -137,8 +137,6 @@
     <string name="piko_pref_pause_search_suggestion_desc">As sugestões de pesquisa não serão salvas localmente.</string>
     <string name="piko_pref_search_suggestion">Ocultar sugestões de pesquisa</string>
     <string name="piko_pref_search_suggestion_desc">Oculta a sugestão de pesquisa na seção explorar.</string>
-    <string name="piko_disunify_xchat_system">Desunificar sistema do xchat</string>
-    <string name="piko_disunify_xchat_system_desc">Traz de volta recursos antigos como mensagens e menu de compartilhamento.</string>
     <string name="piko_legacy_share_link">Links de compartilhamento antigos</string>
     <string name="piko_block_redirecting_to_x_lite">Bloquear o redirecionamento para o X Lite</string>
     <!-- Feature flags Settings -->
@@ -167,10 +165,10 @@
     <string name="piko_pref_show_poll_result">Exibir resultados da enquete</string>
     <string name="piko_pref_show_poll_result_desc">Ver resultados da enquete sem votar.</string>
     <string name="piko_pref_hide_community_notes">Ocultar notas da comunidade</string>
-    <string name="piko_pref_hide_immersive_player">Ocultar player imersivo</string>
-    <string name="piko_pref_hide_immersive_player_desc">Remove o gesto de deslizar para cima para mais vídeos no player.</string>
+    <string name="piko_pref_hide_immersive_player">Desativar jogador imersivo</string>
+    <string name="piko_pref_hide_immersive_player_desc">Desative o novo player de vídeo que permite assistir mais vídeos deslizando para cima</string>
     <string name="piko_pref_enable_vid_auto_advance">Ativar rolagem automática de vídeo</string>
-    <string name="piko_pref_enable_vid_auto_advance_desc">Ativa a rolagem automática de vídeos na visualização imersiva.</string>
+    <string name="piko_pref_enable_vid_auto_advance_desc">Ativa a rolagem automática de vídeo no player imersivo</string>
     <string name="piko_pref_hide_hidden_replies">Ocultar respostas ocultas</string>
     <string name="piko_pref_force_hd">Forçar vídeos em HD</string>
     <string name="piko_pref_force_hd_desc">Os vídeos sempre serão reproduzidos na mais alta qualidade.</string>
@@ -285,6 +283,7 @@
     <string name="piko_app_icon_name_legacy_icon_4">Ícone antigo 4</string>
     <string name="piko_app_icon_name_legacy_blue">Azul antigo</string>
     <string name="piko_app_icon_name_twitter_blue">Twitter Azul</string>
+    <string name="piko_app_icon_name_material_you">Material You</string>
     <string name="piko_app_icon_name_earth">Terra</string>
     <string name="piko_app_icon_name_moon">Lua</string>
     <string name="piko_app_icon_name_mars">Marte</string>

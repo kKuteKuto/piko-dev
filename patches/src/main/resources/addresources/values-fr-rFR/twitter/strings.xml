@@ -3,7 +3,7 @@
     <!-- Settings Search -->
     <string name="piko_settings_search_hint">Rechercher des paramètres de Piko</string>
     <string name="piko_settings_search_clear">Effacer la saisie</string>
-    <string name="piko_settings_search_no_results">Aucun résultat pour \"%1$s\" </string>
+    <string name="piko_settings_search_no_results">Aucun résultat pour \"%s\"</string>
     <!-- Premium Settings -->
     <string name="piko_title_premium">Premium</string>
     <string name="piko_pref_undo_posts">Activer l\'annulation des publications</string>
@@ -86,6 +86,7 @@
     <string name="piko_native_reader_mode_cache_delete_failed">Échec de la suppression du cache</string>
     <string name="piko_title_native_share_menu">Menu de partage natif</string>
     <string name="piko_native_share_menu_toggle">Activer le menu de partage natif</string>
+    <string name="piko_native_share_menu_items_to_hide">Éléments du menu de partage natif à masquer</string>
     <!-- Ads Settings -->
     <string name="piko_title_ads">Publicités</string>
     <string name="piko_pref_hide_promoted_posts">Masquer les publications promues</string>
@@ -137,8 +138,6 @@
     <string name="piko_pref_pause_search_suggestion_desc">Les suggestions de recherche ne seront pas enregistrées localement</string>
     <string name="piko_pref_search_suggestion">Masquer les suggestions de recherche</string>
     <string name="piko_pref_search_suggestion_desc">Masque la suggestion de recherche dans la section Explorer</string>
-    <string name="piko_disunify_xchat_system">Désactiver le système xchat unifié</string>
-    <string name="piko_disunify_xchat_system_desc">Restaurer les anciennes fonctionnalités comme les messages et le menu de partage</string>
     <string name="piko_legacy_share_link">Liens de partage hérités</string>
     <string name="piko_block_redirecting_to_x_lite">Bloquer la redirection vers X Lite</string>
     <!-- Feature flags Settings -->
@@ -167,10 +166,10 @@
     <string name="piko_pref_show_poll_result">Afficher les résultats du sondage</string>
     <string name="piko_pref_show_poll_result_desc">Voir les résultats du sondage sans voter</string>
     <string name="piko_pref_hide_community_notes">Masquer les notes de la communauté</string>
-    <string name="piko_pref_hide_immersive_player">Masquer le joueur immersif</string>
-    <string name="piko_pref_hide_immersive_player_desc">Supprime le balayage vers le haut pour plus de vidéos dans le lecteur vidéo</string>
+    <string name="piko_pref_hide_immersive_player">Désactiver le lecteur immersif</string>
+    <string name="piko_pref_hide_immersive_player_desc">Désactiver le nouveau lecteur vidéo qui permet de regarder davantage de vidéos en faisant glisser vers le haut</string>
     <string name="piko_pref_enable_vid_auto_advance">Activer le défilement automatique de la vidéo</string>
-    <string name="piko_pref_enable_vid_auto_advance_desc">Active le défilement automatique des vidéos en vue immersive</string>
+    <string name="piko_pref_enable_vid_auto_advance_desc">Active le défilement automatique des vidéos dans le lecteur immersif</string>
     <string name="piko_pref_hide_hidden_replies">Masquer les réponses cachées</string>
     <string name="piko_pref_force_hd">Forcer les vidéos HD</string>
     <string name="piko_pref_force_hd_desc">Les vidéos seront toujours lues dans la plus haute qualité</string>
@@ -207,6 +206,7 @@
     <string name="piko_pref_customisation_more_info_on_profile">Plus d\'informations sur le profil</string>
     <string name="piko_pref_customisation_more_info_on_profile_desc">Ajoute plus de détails sur la page de profil</string>
     <string name="piko_fast_follower">Abonné rapide</string>
+    <string name="piko_pref_account_id">ID: %s</string>
     <!-- Font Settings -->
     <string name="piko_title_font">Style de police</string>
     <string name="piko_pref_add_font">Ajouter une police</string>
@@ -285,6 +285,7 @@
     <string name="piko_app_icon_name_legacy_icon_4">Icône classique 4</string>
     <string name="piko_app_icon_name_legacy_blue">Classique bleu</string>
     <string name="piko_app_icon_name_twitter_blue">Twitter Bleu</string>
+    <string name="piko_app_icon_name_material_you">Material You</string>
     <string name="piko_app_icon_name_earth">Terre</string>
     <string name="piko_app_icon_name_moon">Lune</string>
     <string name="piko_app_icon_name_mars">Mars</string>
