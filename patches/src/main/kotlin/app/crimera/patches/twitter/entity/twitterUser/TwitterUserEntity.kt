@@ -19,42 +19,32 @@ val twitterUserEntity =
         description = "For Twitter user entity reflection",
     ) {
         execute {
-
-//            val intList = listOf(STRING_LIST[1], STRING_LIST[2], STRING_LIST[3], STRING_LIST[4])
-//            val intFingerprints =
-//                listOf(
-//                    GetFastFollowersCountExtension,
-//                    GetStatusCountExtension,
-//                    GetMediaCountExtension,
-//                    GetLikesCountExtension,
-//                )
-
-//            val longList = listOf(STRING_LIST[6], STRING_LIST[7])
-//            val longFingerprints =
-//                listOf(
-//                    ,
-//                    ,
-//                )
-
+            // Chỉ lấy tương ứng 4 extension match với 4 string trong Fingerprints.kt đã sửa
             val fingerprintList =
                 listOf(
                     GetFastFollowersCountExtension,
                     GetStatusCountExtension,
                     GetMediaCountExtension,
                     GetLikesCountExtension,
-                    GetArticleCountExtension,
-                    GetLastUpdatedAtExtension,
                 )
 
             TwitterUserToStringFingerprint.apply {
                 val stringMatches = stringMatches
                 method.apply {
-                    STRING_LIST.forEach { str ->
-                        val strListIndex = STRING_LIST.indexOf(str)
-                        val strIndex = stringMatches.first { it.string == str }.index
-                        val valueInstruction = getInstruction(strIndex + 2)
-                        val fieldName = valueInstruction.fieldExtractor().name
-                        fingerprintList[strListIndex].changeFirstString(fieldName)
+                    STRING_LIST.forEachIndexed { strListIndex, str ->
+                        val match = stringMatches.firstOrNull { it.string == str } ?: return@forEachIndexed
+                        val strIndex = match.index
+                        
+                        // Quét lấy đúng lệnh iget/iget-wide gần nhất ngay sau chuỗi thay vì +2 cứng nhắc
+                        val fieldInstructionIndex = indexOfFirstInstruction(strIndex) {
+                            it.opcode.name.startsWith("iget")
+                        }
+
+                        if (fieldInstructionIndex != -1) {
+                            val valueInstruction = getInstruction(fieldInstructionIndex)
+                            val fieldName = valueInstruction.fieldExtractor().name
+                            fingerprintList[strListIndex].changeFirstString(fieldName)
+                        }
                     }
                 }
             }
